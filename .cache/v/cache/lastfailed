@@ -1,4 +1,1 @@
-{
-  "test_search.py::TestSearch::test_binary_search_with_items_in_list": true, 
-  "test_search.py::TestSearch::test_linear_search_with_items_not_in_list": true
-}
+{}
