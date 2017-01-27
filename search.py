@@ -69,14 +69,12 @@ def binary_search_recursive(array, item, left=None, right=None):
     # once implemented, change binary_search to call binary_search_recursive
     # to verify that your recursive implementation passes all tests below
     half = (left+right)/2
-    try:
-        if array[half] == item:
-            return half
 
-    except IndexError:
-        return None
-
-    if item < array[half]:
+    if array[half] == item:
+        return half
+    elif item < array[half]:
         return binary_search_recursive(array, item, left, half - 1)
     elif item > array[half]:
         return binary_search_recursive(array, item, half + 1, right)
+    else:
+        return None
