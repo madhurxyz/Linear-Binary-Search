@@ -1,12 +1,13 @@
 #!python
 
+# Worst Case: O(n)
+# Best Case: Omega(1)
 def linear_search(array, item):
     """return the first index of item in array or None if item is not found"""
     # implement linear_search_iterative and linear_search_recursive below, then
     # change this to call your implementation to verify it passes all tests
     # return linear_search_iterative(array, item)
     return linear_search_recursive(array, item)
-
 
 def linear_search_iterative(array, item):
     # loop over all array values until item is found
@@ -32,7 +33,8 @@ def linear_search_recursive(array, item, index=0):
     #recursive function
     return linear_search_recursive(array, item, index + 1)
 
-
+# Worst Case: O(log(n))
+# Best Case: Omega(1)
 def binary_search(array, item):
     """return the index of item in sorted array or None if item is not found"""
     # implement binary_search_iterative and binary_search_recursive below, then
