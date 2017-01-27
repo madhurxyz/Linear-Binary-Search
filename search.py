@@ -19,20 +19,15 @@ def linear_search_iterative(array, item):
 def linear_search_recursive(array, item, index=0):
     # once implemented, change linear_search to call linear_search_recursive
     # to verify that your recursive implementation passes all tests below
-    # if array[0] == item:
-    #     return index  #base case
-    # elif array[index] is item:
-    #     return index
-    # else:
-    #     return None
 
-    try:
+    try: #If item is in index = 0, we have found the base case
         if array[index] == item:
             return index
-    except IndexError:
+
+    except IndexError: #Try/except was the only way I found to handle IndexError
         return None
 
-    return linear_search_recursive(array, item, index + 1)
+    return linear_search_recursive(array, item, index + 1) #recursive function
 
 
 def binary_search(array, item):
