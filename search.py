@@ -57,8 +57,9 @@ def binary_search_iterative(array, item):
     first = 0
     last = len(array) - 1
     isFound = False
+    half = 0
 
-    while first<=last and isFound:
+    while first<=last and not isFound:
         half = (first+last)/2
         if array[half] == item:
             isFound = True
@@ -66,7 +67,6 @@ def binary_search_iterative(array, item):
             last = half - 1
         elif item > array[half]:
             first = half + 1
-
     return half
 
 
